@@ -6,6 +6,8 @@ import {
   Text,
   useToast,
   extendTheme,
+  Badge,
+  Flex,
 } from "@chakra-ui/react";
 import TipsSection from "./components/TipsSection";
 import Quiz from "./components/Quiz";
@@ -15,6 +17,7 @@ const theme = extendTheme({
   fonts: {
     heading: "Poppins, sans-serif",
     body: "Poppins, sans-serif",
+    arabic: "Tajawal, sans-serif",
   },
   colors: {
     primary: {
@@ -61,9 +64,19 @@ function App() {
             management together. Ready to dive in? 💨
           </Text>
 
-          <Text fontSize="xl" mb={5}>
-            نكرس أنفسنا من اجل ارواح الاخرين
-          </Text>
+          <Flex justifyContent="center">
+            <Badge
+              fontSize="xl"
+              p={2}
+              borderRadius="md"
+              fontFamily="arabic"
+              border="1px solid"
+              borderColor="primary.500"
+            >
+              نكرس أنفسنا من اجل ارواح الاخرين
+            </Badge>
+          </Flex>
+          
           <Heading mb={5} color="primary.600" textAlign="center">
             🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁
           </Heading>
