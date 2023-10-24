@@ -12,6 +12,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import TipsSection from "./components/TipsSection";
 import Quiz from "./components/Quiz";
 import ResourcesSection from "./components/ResourcesSection";
+import InterestingFacts from "./components/InterestingFacts";
 
 const theme = extendTheme({
   fonts: {
@@ -35,7 +36,6 @@ const theme = extendTheme({
 });
 
 function App() {
-
   return (
     <ChakraProvider theme={theme}>
       <Container maxW="container.xl" padding={3}>
@@ -45,7 +45,7 @@ function App() {
             🎉 Welcome Super RTs
           </Heading>
           <Heading mb={3} color="primary.600">
-             RC Day in MACHS! 🫁
+            RC Day in MACHS! 🫁
           </Heading>
           <Text fontSize="xl" mb={5}>
             Embark on an exhilarating journey as we explore the realms of airway
@@ -80,7 +80,7 @@ function App() {
           <Heading mb={5} color="primary.600" textAlign="center">
             🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁
           </Heading>
-
+          <InterestingFacts />
           <TipsSection />
 
           <Box my={5}>
