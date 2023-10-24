@@ -7,12 +7,15 @@ import {
   extendTheme,
   Badge,
   Flex,
+  Link,
+  Icon,
 } from "@chakra-ui/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import TipsSection from "./components/TipsSection";
 import Quiz from "./components/Quiz";
 import ResourcesSection from "./components/ResourcesSection";
 import InterestingFacts from "./components/InterestingFacts";
+import { FaGithub } from "react-icons/fa";
 
 const theme = extendTheme({
   fonts: {
@@ -104,6 +107,26 @@ function App() {
           Made with 💙 for 🕯
         </Badge>
       </Flex>
+      <div>
+        <Text textAlign="center" fontSize="sm">
+          Found issues/bugs/want to contribute?{" "}
+        </Text>
+        <Text textAlign="center" mt={2} fontSize="sm">
+          Check the{" "}
+          <Link
+            href="https://github.com/HadiAlMarzooq/airwaymanagment"
+            isExternal
+            display="inline-flex"
+            alignItems="center"
+            color="primary.500"
+            _hover={{
+              color: "primary.600",
+            }}
+          >
+            GitHub repository <Icon as={FaGithub} ml={2} boxSize={4} />
+          </Link>
+        </Text>
+      </div>
     </ChakraProvider>
   );
 }

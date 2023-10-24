@@ -25,18 +25,6 @@ function ResourcesSection() {
       name: "Airway Training - Harvard",
       url: "https://www.pulmonaryfellowship.hms.harvard.edu/airway-training",
     },
-    {
-      name: "Crisis Resource Management of the Airway - Harvard",
-      url: "https://projects.iq.harvard.edu/airwaymanagement/crisis-resource-management-airway",
-    },
-    {
-      name: "Emergency Airway Encounters by Air Medical Providers - Harvard",
-      url: "https://dash.harvard.edu/handle/1/3966436",
-    },
-    {
-      name: "The Walls Manual Of Emergency Airway Management - Harvard",
-      url: "https://help.environment.harvard.edu/the-walls-manual-of-emergency-airway-management",
-    },
   ];
 
   return (
