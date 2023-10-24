@@ -1,3 +1,4 @@
+// Import necessary libraries
 import {
   ChakraProvider,
   Box,
@@ -16,7 +17,9 @@ import Quiz from "./components/Quiz";
 import ResourcesSection from "./components/ResourcesSection";
 import InterestingFacts from "./components/InterestingFacts";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
+// Define your theme
 const theme = extendTheme({
   fonts: {
     heading: "Poppins, sans-serif",
@@ -38,22 +41,42 @@ const theme = extendTheme({
   },
 });
 
+// Create motion variants for your components
+const MotionBox = motion(Box);
+const MotionHeading = motion(Heading);
+const MotionText = motion(Text);
+
+// Define your App component
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Container maxW="container.xl" padding={3}>
-        {" "}
-        <Box p={5} bg="primary.100" borderRadius="md">
-          <Heading mb={3} color="primary.600">
+        <MotionBox
+          p={5}
+          bg="primary.100"
+          borderRadius="md"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <MotionHeading
+            mb={3}
+            color="primary.600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
             🎉 Welcome Super RTs
-          </Heading>
-          <Heading mb={3} color="primary.600">
+          </MotionHeading>
+          <MotionHeading
+            mb={3}
+            color="primary.600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
+          >
             RC Day in MACHS! 🫁
-          </Heading>
-          <Text fontSize="xl" mb={5}>
-            Embark on an exhilarating journey as we explore the realms of airway
-            management together. Ready to dive in? 💨
-          </Text>
+          </MotionHeading>
           <Flex justifyContent="center" mt={2}>
             <Player
               src="./lungs.json" // Adjust the path to your Lottie file
@@ -79,6 +102,16 @@ function App() {
               نُكَرِّسُ أَنفُسَنَا مِن أَجْلِ أَرْوَاحِ الآخَرِينَ
             </Badge>
           </Flex>
+          <MotionText
+            fontSize="xl"
+            mb={5}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.5 }}
+          >
+            Embark on an exhilarating journey as we explore the realms of airway
+            management together. Ready to dive in? 💨
+          </MotionText>
 
           <Heading mb={5} color="primary.600" textAlign="center">
             🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁
@@ -91,7 +124,7 @@ function App() {
           </Box>
 
           <ResourcesSection />
-        </Box>
+        </MotionBox>
       </Container>
       <Flex justifyContent="center" width="100%" paddingBottom={2}>
         <Badge
@@ -131,4 +164,5 @@ function App() {
   );
 }
 
+// Export your App component
 export default App;
