@@ -105,7 +105,19 @@ function Quiz() {
 
   return (
     <Box mt={5}>
-      <Flex align="center" onClick={onToggle} cursor="pointer">
+      <Flex
+        align="center"
+        justify="space-between"
+        onClick={onToggle}
+        cursor="pointer"
+        bg="primary.100"
+        p={4}
+        borderRadius="md"
+        boxShadow="md"
+        _hover={{
+          bg: "primary.200",
+        }}
+      >
         <Heading size="lg" color="primary.500" mb={3}>
           🫁 Quiz
         </Heading>
