@@ -61,6 +61,12 @@ function App() {
         >
           <MotionHeading
             mb={3}
+            style={{
+              fontSize: "3rem",
+              fontWeight: "bold",
+              color: "#2D3748",
+              marginBottom: "1rem",
+            }}
             color="primary.600"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -69,6 +75,11 @@ function App() {
             🎉 Welcome Super RTs
           </MotionHeading>
           <MotionHeading
+            style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+            }}
             mb={3}
             color="primary.600"
             initial={{ opacity: 0 }}
