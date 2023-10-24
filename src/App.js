@@ -1,9 +1,21 @@
-import { ChakraProvider, Box, Container, Heading, useToast, extendTheme } from '@chakra-ui/react';
-import TipsSection from './components/TipsSection';
-import Quiz from './components/Quiz';
-import ResourcesSection from './components/ResourcesSection';
+import {
+  ChakraProvider,
+  Box,
+  Container,
+  Heading,
+  Text,
+  useToast,
+  extendTheme,
+} from "@chakra-ui/react";
+import TipsSection from "./components/TipsSection";
+import Quiz from "./components/Quiz";
+import ResourcesSection from "./components/ResourcesSection";
 
 const theme = extendTheme({
+  fonts: {
+    heading: "Poppins, sans-serif",
+    body: "Poppins, sans-serif",
+  },
   colors: {
     primary: {
       100: "#ffe0e9",
@@ -35,10 +47,25 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" padding={3}>
+        {" "}
         <Box p={5} bg="primary.100" borderRadius="md">
-          <Heading mb={5} color="primary.600">
-            🫁 Airway Management Quick Tips 🫁
+          <Heading mb={3} color="primary.600">
+            🎉 Welcome Super RTs
+          </Heading>
+          <Heading mb={3} color="primary.600">
+            The RC Day! 🫁
+          </Heading>
+          <Text fontSize="xl" mb={5}>
+            Embark on an exhilarating journey as we explore the realms of airway
+            management together. Ready to dive in? 💨
+          </Text>
+
+          <Text fontSize="xl" mb={5}>
+            نكرس أنفسنا من اجل ارواح الاخرين
+          </Text>
+          <Heading mb={5} color="primary.600" textAlign="center">
+            🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁
           </Heading>
 
           <TipsSection />
@@ -48,21 +75,6 @@ function App() {
           </Box>
 
           <ResourcesSection />
-
-          <Box my={5}>
-            <Heading size="md" mb={3} color="primary.500">
-              Feedback
-            </Heading>
-            {/* <iframe 
-              src="YOUR_GOOGLE_FORM_LINK" 
-              width="100%" 
-              height="500" 
-              frameborder="0" 
-              marginheight="0" 
-              marginwidth="0">
-              Loading…
-            </iframe> */}
-          </Box>
         </Box>
       </Container>
     </ChakraProvider>
