@@ -14,9 +14,7 @@ import {
   useTheme,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion";
 
-const MotionBox = motion(Box);
 
 function Quiz() {
   const [selectedAnswers, setSelectedAnswers] = useState({});
