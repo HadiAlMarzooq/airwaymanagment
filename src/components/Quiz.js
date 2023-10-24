@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -12,28 +12,32 @@ import {
   Collapse,
   useDisclosure,
   useTheme,
+  useToast,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-
+import Confetti from "react-confetti";
 
 function Quiz() {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [isQuizFinished, setIsQuizFinished] = useState(false);
   const [score, setScore] = useState(0);
   const { isOpen, onToggle } = useDisclosure();
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true); // Add this line
+
   const theme = useTheme();
+  const toast = useToast();
 
   const questions = [
     {
       question: "1. What's the first step in airway management?",
-      options: ["Check responsiveness", "Ventilate chest", "Check pulse"],
+      options: ["Check pulse", "Check responsiveness", "Ventilate chest"],
       correctAnswer: "Check responsiveness",
       explanation:
         "Checking responsiveness is crucial to determine the patient's level of consciousness and to proceed with further airway management steps.",
     },
     {
       question: "2. Which maneuver can be used to open the airway?",
-      options: ["Chin lift", "Chest compression", "Heimlich maneuver"],
+      options: ["Chest compression", "Chin lift", "Heimlich maneuver"],
       correctAnswer: "Chin lift",
       explanation:
         "The chin lift maneuver helps to open the airway by tilting the head back and lifting the chin up.",
@@ -48,11 +52,11 @@ function Quiz() {
     {
       question: "4. What should you do if spontaneous breathing is absent?",
       options: [
-        "Institute positive-pressure ventilation",
         "Wait for spontaneous breathing",
+        "Institute positive-pressure ventilation",
         "Check pulse only",
       ],
-      correctAnswer: "5. Institute positive-pressure ventilation",
+      correctAnswer: "Institute positive-pressure ventilation",
       explanation:
         "If spontaneous breathing is absent, it's essential to institute positive-pressure ventilation to support the patient's respiratory needs.",
     },
@@ -64,7 +68,10 @@ function Quiz() {
         "Oral airways are basic airway adjuncts used to maintain an open airway in unconscious patients.",
     },
   ];
-
+  useEffect(() => {
+    const answeredQuestionsCount = Object.keys(selectedAnswers).length;
+    setIsSubmitDisabled(answeredQuestionsCount !== questions.length);
+  }, [selectedAnswers, questions.length]);
   const checkAnswers = () => {
     let score = 0;
     for (let q of questions) {
@@ -74,6 +81,22 @@ function Quiz() {
     }
     setScore(score);
     setIsQuizFinished(true);
+    toast({
+      title:
+        score === 5
+          ? `You scored ${score} out of ${questions.length}! 🎉`
+          : `You scored ${score} out of ${questions.length}! 🙁`,
+      status: score === 5 ? "success" : "error",
+      duration: 5000,
+      isClosable: true,
+      position: "top",
+    });
+  };
+
+  const resetQuiz = () => {
+    setSelectedAnswers({});
+    setIsQuizFinished(false);
+    setScore(0);
   };
 
   const onChange = (value, question) => {
@@ -135,15 +158,28 @@ function Quiz() {
                 </RadioGroup>
               </Box>
             ))}
-            <Button colorScheme="pink" onClick={checkAnswers}>
+            <Button
+              colorScheme="pink"
+              onClick={checkAnswers}
+              isDisabled={isSubmitDisabled}
+            >
               Submit
             </Button>
           </VStack>
         ) : (
           <VStack spacing={4} align="start">
-            <Text color="primary.600">
-              You scored {score} out of {questions.length}
-            </Text>
+            <Box position="relative">
+              {score === 5 && (
+                <Confetti
+                  width={window.innerWidth}
+                  height={window.innerHeight * 2}
+                  style={{ position: "absolute", top: 0, left: 0 }}
+                />
+              )}
+              <Text color="primary.600">
+                You scored {score} out of {questions.length}
+              </Text>
+            </Box>
             {questions.map((q, index) => (
               <Box
                 key={index}
@@ -169,6 +205,9 @@ function Quiz() {
                 </Text>
               </Box>
             ))}
+            <Button colorScheme="pink" onClick={resetQuiz}>
+              Reset
+            </Button>
           </VStack>
         )}
       </Collapse>
