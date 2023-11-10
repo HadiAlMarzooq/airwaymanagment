@@ -66,7 +66,7 @@ function TipsSection() {
         }}
       >
         <Heading size="lg" color="primary.500" mb={3}>
-          🫁 Quick Tips
+          📄 Article
         </Heading>
         <Icon
           as={isOpen ? ChevronUpIcon : ChevronDownIcon}
