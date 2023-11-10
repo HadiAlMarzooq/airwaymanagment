@@ -31,7 +31,7 @@ function ResourcesSection() {
     <Box mt={5}>
       <Flex align="center" onClick={onToggle} cursor="pointer">
         <Heading size="lg" color="primary.500" mb={3}>
-          🫁 Resources & Links
+          🫁 Resources & Video Links
         </Heading>
         <Icon
           as={isOpen ? ChevronUpIcon : ChevronDownIcon}
