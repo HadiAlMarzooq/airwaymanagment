@@ -111,14 +111,15 @@ function App() {
             </Badge>
           </Flex>
           <MotionText
-            fontSize="xl"
+            fontSize="l"
             mb={5}
+            mt="2rem"
+            textAlign="center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.5 }}
-            
           >
-            Embark on an exhilarating journey as we explore the realms of Cystic Fibrosis together. Ready to dive in? 💨
+            Embark on an exhilarating journey as we explore the realms of Cystic Fibrosis together. Ready to dive in? 
           </MotionText>
 
           <Heading mb={5} color="primary.600" textAlign="center">
