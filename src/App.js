@@ -8,15 +8,12 @@ import {
   extendTheme,
   Badge,
   Flex,
-  Link,
-  Icon,
 } from "@chakra-ui/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import TipsSection from "./components/TipsSection";
 import Quiz from "./components/Quiz";
 import ResourcesSection from "./components/ResourcesSection";
 import InterestingFacts from "./components/InterestingFacts";
-import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 // Define your theme
@@ -32,7 +29,7 @@ const theme = extendTheme({
       200: "#bfb2ff",
       300: "#9984ff",
       400: "#7356ff",
-      500: "#4d28ff",
+      500: "#240d8c",
       600: "#411de4",
       700: "#3215b8",
       800: "#240d8c",
@@ -81,18 +78,18 @@ function App() {
               marginBottom: "1rem",
             }}
             mb={3}
-            color="primary.600"
+            color="primary.800"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.5 }}
           >
-            RC Day in MACHS! 🫁
+            Pediatrics Disorder Day at MACHS! 🫁
           </MotionHeading>
           <Flex justifyContent="center" mt={2}>
             <Player
-              src="./lungs.json" // Adjust the path to your Lottie file
+              src="./lungs.json" 
               background="transparent"
-              speed={1}
+              speed={0.5}
               style={{ width: "300px", height: "300px" }}
               loop
               autoplay
@@ -119,9 +116,9 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.5 }}
+            
           >
-            Embark on an exhilarating journey as we explore the realms of airway
-            management together. Ready to dive in? 💨
+            Embark on an exhilarating journey as we explore the realms of Cystic Fibrosis together. Ready to dive in? 💨
           </MotionText>
 
           <Heading mb={5} color="primary.600" textAlign="center">
@@ -137,40 +134,6 @@ function App() {
           <ResourcesSection />
         </MotionBox>
       </Container>
-      <Flex justifyContent="center" width="100%" paddingBottom={2}>
-        <Badge
-          fontSize="md"
-          color="primary.600"
-          borderRadius="md"
-          fontFamily="body"
-          border="1px solid"
-          borderColor="primary.500"
-          bg="primary.100"
-          justifyContent="center"
-        >
-          Made with 💙 for 🕯
-        </Badge>
-      </Flex>
-      <div>
-        <Text textAlign="center" fontSize="sm">
-          Found issues/bugs/want to contribute?{" "}
-        </Text>
-        <Text textAlign="center" mt={2} fontSize="sm">
-          Check the{" "}
-          <Link
-            href="https://github.com/HadiAlMarzooq/airwaymanagment"
-            isExternal
-            display="inline-flex"
-            alignItems="center"
-            color="primary.500"
-            _hover={{
-              color: "primary.600",
-            }}
-          >
-            GitHub repository <Icon as={FaGithub} ml={2} boxSize={4} />
-          </Link>
-        </Text>
-      </div>
     </ChakraProvider>
   );
 }
