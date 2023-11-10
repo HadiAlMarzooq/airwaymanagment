@@ -77,6 +77,7 @@ import {
                 />
               </Flex>
               <Collapse in={section.disclosure.isOpen} animateOpacity>
+                {/* content */}
               </Collapse>
             </Box>
           ))}
