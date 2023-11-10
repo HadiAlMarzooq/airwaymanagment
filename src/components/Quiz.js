@@ -29,45 +29,37 @@ function Quiz() {
 
   const questions = [
     {
-      question: "1. What's the first step in airway management?",
-      options: ["Check pulse", "Check responsiveness", "Ventilate chest"],
-      correctAnswer: "Check responsiveness",
-      explanation:
-        "Checking responsiveness is crucial to determine the patient's level of consciousness and to proceed with further airway management steps.",
+      question: "1. Which of the following glands are most commonly affected by CF?",
+      options: ["A. Adrenal glands", "B. Sebaceous glands", "C. Exocrine glands", "D. Endocrine glands"],
+      correctAnswer: "C. Exocrine glands",
+      explanation: "CF primarily affects the exocrine glands, which are responsible for producing mucus, sweat, and digestive enzymes."
     },
     {
-      question: "2. Which maneuver can be used to open the airway?",
-      options: ["Chest compression", "Chin lift", "Heimlich maneuver"],
-      correctAnswer: "Chin lift",
-      explanation:
-        "The chin lift maneuver helps to open the airway by tilting the head back and lifting the chin up.",
+      question: "2. What is the chance of a child being affected by CF if both parents are carriers of the recessive CF gene?",
+      options: ["A. 25%", "B. 50%", "C. 75%", "D. 100%"],
+      correctAnswer: "A. 25%",
+      explanation: "If both parents are carriers of the recessive CF gene, there is a 25% chance that their child will inherit the gene from both and be affected by CF."
     },
     {
-      question: "3. What device can provide supplemental oxygen?",
-      options: ["Bag-mask", "Stethoscope", "Defibrillator"],
-      correctAnswer: "Bag-mask",
-      explanation:
-        "A bag-mask device is used to provide positive pressure ventilation and supplemental oxygen to patients in need.",
+      question: "3. The presence of what substance is elevated in the sweat of a person with CF?",
+      options: ["A. Sodium", "B. Potassium", "C. Chloride", "D. Calcium"],
+      correctAnswer: "C. Chloride",
+      explanation: "People with CF have elevated levels of chloride in their sweat, which is a key diagnostic indicator of the disease."
     },
     {
-      question: "4. What should you do if spontaneous breathing is absent?",
-      options: [
-        "Wait for spontaneous breathing",
-        "Institute positive-pressure ventilation",
-        "Check pulse only",
-      ],
-      correctAnswer: "Institute positive-pressure ventilation",
-      explanation:
-        "If spontaneous breathing is absent, it's essential to institute positive-pressure ventilation to support the patient's respiratory needs.",
+      question: "4. Which of the following is a common clinical manifestation of CF?",
+      options: ["A. Dry cough", "B. Low chloride levels in sweat", "C. Elevated hemoglobin levels", "D. Cough with thick mucus production"],
+      correctAnswer: "D. Cough with thick mucus production",
+      explanation: "A common symptom of CF is a cough that produces thick mucus, due to the accumulation of mucus in the respiratory tract."
     },
     {
-      question: "Which of the following is a basic airway adjunct?",
-      options: ["Oral airway", "ECG machine", "Blood pressure cuff"],
-      correctAnswer: "Oral airway",
-      explanation:
-        "Oral airways are basic airway adjuncts used to maintain an open airway in unconscious patients.",
-    },
+      question: "5. Which mucolytic agent is commonly used in the treatment of CF?",
+      options: ["A. Acetylcysteine", "B. Dornase alfa", "C. Guaifenesin", "D. Bromhexine"],
+      correctAnswer: "B. Dornase alfa",
+      explanation: "Dornase alfa is a mucolytic agent commonly used in CF treatment to help break down mucus and improve lung function."
+    }
   ];
+  
   useEffect(() => {
     const answeredQuestionsCount = Object.keys(selectedAnswers).length;
     setIsSubmitDisabled(answeredQuestionsCount !== questions.length);
