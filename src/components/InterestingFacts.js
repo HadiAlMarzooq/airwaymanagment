@@ -16,7 +16,6 @@ import {
     const clinicalDisclosure = useDisclosure();
     const treatmentDisclosure = useDisclosure();
     const diagnosisDisclosure = useDisclosure();
-    const prognosisDisclosure = useDisclosure();
   
     const sections = [
       { title: "Introduction", disclosure: introDisclosure },
@@ -24,7 +23,6 @@ import {
       { title: "Clinical Manifestations", disclosure: clinicalDisclosure },
       { title: "Treatment", disclosure: treatmentDisclosure },
       { title: "Diagnosis", disclosure: diagnosisDisclosure },
-      { title: "Prognosis", disclosure: prognosisDisclosure },
     ];
   
     return (
