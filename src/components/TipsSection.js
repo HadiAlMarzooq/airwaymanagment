@@ -1,52 +1,35 @@
+// src/components/TipsSection.js
 import {
   Box,
   Heading,
-  Image,
   Text,
   useDisclosure,
   Collapse,
   Flex,
   Icon,
+  Link,
   useTheme,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
-import tip1 from "../assets/images/tip1.png";
-import tip2 from "../assets/images/tip2.png";
-import tip3 from "../assets/images/tip3.png";
-import tip4 from "../assets/images/tip4.png";
-import tip5 from "../assets/images/tip5.png";
+
 const MotionBox = motion(Box);
 
 function TipsSection() {
   const { isOpen, onToggle } = useDisclosure();
   const theme = useTheme();
-  const imageSize = useBreakpointValue({
-    base: "100px",
-    md: theme.sizes["2xs"],
-  });
 
-  const tips = [
+  const articles = [
     {
-      text: "Tip 1: Always ensure clear airways by assessing responsiveness, calling for help if needed, and opening the airway to check for breathing.",
-      image: tip1,
+      title: "An Introduction to Cystic Fibrosis For Patients and Their Families",
+      author: "Cunningham, J. C., & Taussig, L. M. (6th ed.)",
+      link: "https://www.cysticfibrosis.ca/uploads/intro%20to%20treatment/Lung_Transplants_WEB_Compressed.pdf",
     },
     {
-      text: "Tip 2: Use basic airway maneuvers such as chin lift or jaw thrust to open the airway.",
-      image: tip2,
-    },
-    {
-      text: "Tip 3: Employ airway adjuncts like oral or nasal airways if simple maneuvers are inadequate.",
-      image: tip3,
-    },
-    {
-      text: "Tip 4: In case of inadequate or absent spontaneous breathing, provide supplemental oxygen and institute positive-pressure ventilation.",
-      image: tip4,
-    },
-    {
-      text: "Tip 5: Use a bag-mask ventilation or a two-person technique for better airway management, and continuously monitor the patient's pulse and breathing.",
-      image: tip5,
+      title: "Neonatal and Pediatric Respiratory Care (5th ed.)",
+      author: "Walsh, B. K. (2019)",
+      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7021809/",
     },
   ];
 
@@ -75,7 +58,7 @@ function TipsSection() {
         />{" "}
       </Flex>
       <Collapse in={isOpen} animateOpacity>
-        {tips.map((tip, index) => (
+        {articles.map((article, index) => (
           <MotionBox
             key={index}
             bg={"#fff"}
@@ -89,10 +72,17 @@ function TipsSection() {
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
             <Flex align="center" mb={3}>
-              <Image src={tip.image} boxSize={imageSize} mr={3} />
-              <Text color="primary.600" fontWeight="bold">
-                {tip.text}
-              </Text>
+              <Box>
+                <Text color="primary.600" fontWeight="bold">
+                  {article.title}
+                </Text>
+                <Text color="primary.600">
+                  {article.author}
+                </Text>
+                <Link href={article.link} isExternal color="blue.500">
+                  Read More
+                </Link>
+              </Box>
             </Flex>
           </MotionBox>
         ))}
