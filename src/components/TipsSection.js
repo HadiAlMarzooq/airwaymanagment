@@ -22,14 +22,15 @@ function TipsSection() {
 
   const articles = [
     {
-      title: "An Introduction to Cystic Fibrosis For Patients and Their Families",
+      title:
+        "An Introduction to Cystic Fibrosis For Patients and Their Families",
       author: "Cunningham, J. C., & Taussig, L. M. (6th ed.)",
-      link: "https://www.cysticfibrosis.ca/uploads/intro%20to%20treatment/Lung_Transplants_WEB_Compressed.pdf",
+      link: "https://www.cff.org/sites/default/files/2021-09/Intro-to-CF.pdf",
     },
     {
       title: "Neonatal and Pediatric Respiratory Care (5th ed.)",
       author: "Walsh, B. K. (2019)",
-      link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7021809/",
+      link: "https://www.biblio.com/book/neonatal-pediatric-respiratory-care-5ed-pb/d/1430477091",
     },
   ];
 
@@ -76,9 +77,7 @@ function TipsSection() {
                 <Text color="primary.600" fontWeight="bold">
                   {article.title}
                 </Text>
-                <Text color="primary.600">
-                  {article.author}
-                </Text>
+                <Text color="primary.600">{article.author}</Text>
                 <Link href={article.link} isExternal color="blue.500">
                   Read More
                 </Link>
