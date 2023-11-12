@@ -87,7 +87,7 @@ function App() {
           </MotionHeading>
           <Flex justifyContent="center" mt={2}>
             <Player
-              src="./lungs.json" 
+              src="./lungs.json"
               background="transparent"
               speed={0.5}
               style={{ width: "300px", height: "300px" }}
@@ -119,20 +119,25 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.5 }}
           >
-            Embark on an exhilarating journey as we explore the realms of Cystic Fibrosis together. Ready to dive in? 
+            Embark on an exhilarating journey as we explore the realms of Cystic
+            Fibrosis together. Ready to dive in?
           </MotionText>
 
           <Heading mb={5} color="primary.600" textAlign="center">
             🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁
           </Heading>
-          <InterestingFacts />
-          <TipsSection />
+            <InterestingFacts />
+
+          <Box my={5}>
+            <TipsSection />
+          </Box>
 
           <Box my={5}>
             <Quiz />
           </Box>
-
-          <ResourcesSection />
+          <Box my={5}>
+            <ResourcesSection />
+          </Box>
         </MotionBox>
       </Container>
     </ChakraProvider>
