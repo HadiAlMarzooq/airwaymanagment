@@ -1,3 +1,4 @@
+// src/components/ResourcesSection.js
 import {
   Box,
   Heading,
@@ -6,6 +7,7 @@ import {
   Icon,
   Collapse,
   useDisclosure,
+  Text,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
@@ -15,15 +17,14 @@ const MotionBox = motion(Box);
 function ResourcesSection() {
   const { isOpen, onToggle } = useDisclosure();
 
-
   const resources = [
     {
-      name: "Simple Airway Maneuvers - Elentra",
-      url: "https://elentra.healthsci.queensu.ca/assets/modules/basic-airway-management/simple_airway_maneuvers.html",
+      name: "An Introduction to Cystic Fibrosis For Patients and Their Families",
+      url: "https://www.cysticfibrosis.ca/uploads/intro%20to%20treatment/Lung_Transplants_WEB_Compressed.pdf",
     },
     {
-      name: "Airway Training - Harvard",
-      url: "https://www.pulmonaryfellowship.hms.harvard.edu/airway-training",
+      name: "Neonatal and Pediatric Respiratory Care",
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7021809/",
     },
   ];
 
@@ -31,7 +32,7 @@ function ResourcesSection() {
     <Box mt={5}>
       <Flex align="center" onClick={onToggle} cursor="pointer">
         <Heading size="lg" color="primary.500" mb={3}>
-          🫁 Resources & Video Links
+          🔗 Resources 
         </Heading>
         <Icon
           as={isOpen ? ChevronUpIcon : ChevronDownIcon}
@@ -48,6 +49,10 @@ function ResourcesSection() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
             mb={3}
+            p={3}
+            borderRadius="md"
+            boxShadow="md"
+            bg="white"
           >
             <Link
               href={resource.url}
