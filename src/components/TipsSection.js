@@ -58,34 +58,36 @@ function TipsSection() {
           boxSize={8}
         />{" "}
       </Flex>
-      <Collapse in={isOpen} animateOpacity>
-        {articles.map((article, index) => (
-          <MotionBox
-            key={index}
-            bg={"#fff"}
-            p={3}
-            borderRadius="md"
-            mb={3}
-            boxShadow="md"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-          >
-            <Flex align="center" mb={3}>
-              <Box>
-                <Text color="primary.600" fontWeight="bold">
-                  {article.title}
-                </Text>
-                <Text color="primary.600">{article.author}</Text>
-                <Link href={article.link} isExternal color="blue.500">
-                  Read More
-                </Link>
-              </Box>
-            </Flex>
-          </MotionBox>
-        ))}
-      </Collapse>
+      <Box my={5}>
+        <Collapse in={isOpen} animateOpacity>
+          {articles.map((article, index) => (
+            <MotionBox
+              key={index}
+              bg={"#fff"}
+              p={3}
+              borderRadius="md"
+              mb={3}
+              boxShadow="md"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+            >
+              <Flex align="center" mb={3}>
+                <Box>
+                  <Text color="primary.600" fontWeight="bold">
+                    {article.title}
+                  </Text>
+                  <Text color="primary.600">{article.author}</Text>
+                  <Link href={article.link} isExternal color="blue.500">
+                    Read More
+                  </Link>
+                </Box>
+              </Flex>
+            </MotionBox>
+          ))}
+        </Collapse>
+      </Box>
     </Box>
   );
 }
