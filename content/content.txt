@@ -1,0 +1,27 @@
+Introduction & Etiology: 
+Cystic Fibrosis is a hereditary disease that affects the exocrine glands, particularly located in the pancreas, sweat glands, and lungs. The condition results from a unique genetic transmission where both parents must carry the gene for the disease, and there's a one-in-four chance that their child will inherit it.
+
+Pathophysiology : 
+Dysfunction of the CFTR protein leads to the abnormal production of thick and sticky mucus. This thick mucus impairs the normal functioning of cilia (which is clearance) and reduces the effectiveness of the immune system. Thus, the accumulated mucus obstructs airflow (= atelectasis), leading to chronic lung infections (pneumonia), inflammation, progressive structural changes in the lung tissue (= fibrosis), and air trapping as a result of exhaling difficulties (= hyperinflation).
+
+Clinical manifestations: 
+Cystic fibrosis (CF) manifests in various organs, but as respiratory therapists our focus is on lung symptoms. These include salty-tasting skin, excessive sweating, recurrent lung/sinus infections, wheezing, shortness of breath at rest, coughing up blood or thick mucus, and cardiomegaly. To initiate further investigation, prioritize patient history, considering clinical signs in one organ system, the presence of a confirmed sibling with CF, or a positive newborn screening result for CF.
+
+Diagnosis: 
+1- Sweat test
+A sweat test is *the standard CF test* for confirming the diagnosis. It involves analyzing the salt levels in a person’s sweat. Doctors carry out the test twice. If both results show high concentration of salt 60 mmol/L or greater, the CF is confirmed.
+
+2- CXR: 
+From the pathophysiology of the disease, we must expect to see in the chest x-ray areas of high density because of mucus, air bronchograms, areas of atelectasis, hyperinflation and flattened diaphragm.
+
+Treatment plans: 
+There is no direct treatment for cystic fibrosis patients, only we can manage their CF-related symptoms by different treatment plans, which usually include the following: multiple medications, airway clearance techniques, and as a last resort, lung transplantation. 
+
+1- Bronchodilators, mucolytics and airway clearance: 
+Aerosolized bronchodilator given followed by mucolytics to dilute secretions before moving and coughing them out using various airway clearance techniques (vest, acapella, …)
+
+2- Antibiotics & essential oils:
+Recurrent and chronic respiratory infections are usually treated with antibiotics. But intensive use of these antimicrobial drugs to fight lung infections inevitably leads to the onset of antibiotic resistant bacterial strains. For this reason, researchers developed new antibacterial agents such as essential oils from different origin (lavender, peppermint and Alluaudia procera) and found them active against the antibiotic resistance and played an effective role in improving patient’s survival.
+
+3- Lung transportation:
+Researchers reported that when medical management alone cannot maintain lung health, a lung transplant is essential *as a last resort* to prolong and improve the quality of the patient's life. During the procedure, diseased lungs are replaced with healthy lungs gifted from a deceased donor. After the procedure, the recipient’s gets free from the respiratory symptoms, because the lungs that transplanted do not have cystic fibrosis since they have the DNA of the person who donated them, but cystic fibrosis is still occur in other organs in the body, for example, in the pancreas, and it needs to be managed.
