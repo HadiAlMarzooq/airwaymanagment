@@ -72,7 +72,7 @@ function InterestingFacts() {
             therapists our focus is on lung symptoms. These include
             salty-tasting skin, excessive sweating, recurrent lung/sinus
             infections, wheezing, shortness of breath at rest, coughing up blood
-            or thick mucus, and cardiomegaly. To initiate further investigation,
+            or thick mucus, and digital clubbing. To initiate further investigation,
             prioritize patient history, considering clinical signs in one organ
             system, the presence of a confirmed sibling with CF, or a positive
             newborn screening result for CF.
