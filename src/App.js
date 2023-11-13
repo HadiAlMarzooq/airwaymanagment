@@ -50,16 +50,16 @@ function App() {
           alignItems="center"
           justifyContent="center"
         >
+          <Text fontSize="xs">
+            © All copyright for the domains under candles.works belong to Shmoa
+            Al Basri{" "}
+          </Text>
           <Link
             href="https://www.linkedin.com/in/shmoa-albasri-970261244/"
             isExternal
           >
             <Icon as={FaLinkedin} mx={1} />
           </Link>
-          <Text fontSize="xs">
-            © All copyright for the domains under candles.works belong to
-            Shmoa Al Basri{" "}
-          </Text>
         </Flex>
       </Router>
     </ChakraProvider>
