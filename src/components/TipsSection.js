@@ -13,26 +13,13 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
+import myVideo from "../assets/videos/story.mp4";
 
 const MotionBox = motion(Box);
 
 function TipsSection() {
   const { isOpen, onToggle } = useDisclosure();
   const theme = useTheme();
-
-  const articles = [
-    {
-      title:
-        "An Introduction to Cystic Fibrosis For Patients and Their Families",
-      author: "Cunningham, J. C., & Taussig, L. M. (6th ed.)",
-      link: "https://www.cff.org/sites/default/files/2021-09/Intro-to-CF.pdf",
-    },
-    {
-      title: "Neonatal and Pediatric Respiratory Care (5th ed.)",
-      author: "Walsh, B. K. (2019)",
-      link: "https://www.biblio.com/book/neonatal-pediatric-respiratory-care-5ed-pb/d/1430477091",
-    },
-  ];
 
   return (
     <Box mt={5}>
@@ -50,7 +37,7 @@ function TipsSection() {
         }}
       >
         <Heading size="lg" color="primary.500" mb={3}>
-          📄 Video & Story 
+          📄 Video & Story
         </Heading>
         <Icon
           as={isOpen ? ChevronUpIcon : ChevronDownIcon}
@@ -60,32 +47,22 @@ function TipsSection() {
       </Flex>
       <Box my={5}>
         <Collapse in={isOpen} animateOpacity>
-          {articles.map((article, index) => (
-            <MotionBox
-              key={index}
-              bg={"#fff"}
-              p={3}
-              borderRadius="md"
-              mb={3}
-              boxShadow="md"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-            >
-              <Flex align="center" mb={3}>
-                <Box>
-                  <Text color="primary.600" fontWeight="bold">
-                    {article.title}
-                  </Text>
-                  <Text color="primary.600">{article.author}</Text>
-                  <Link href={article.link} isExternal color="blue.500">
-                    Read More
-                  </Link>
-                </Box>
-              </Flex>
-            </MotionBox>
-          ))}
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="500px"
+            width="100%"
+            overflow="hidden"
+            borderRadius="md"
+            boxShadow="lg"
+            bg="gray.100"
+          >
+            <video autoPlay controls style={{ maxWidth: "100%", height: "auto" }}>
+              <source src={myVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </Box>
         </Collapse>
       </Box>
     </Box>
