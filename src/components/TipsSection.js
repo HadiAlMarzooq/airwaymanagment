@@ -50,7 +50,7 @@ function TipsSection() {
         }}
       >
         <Heading size="lg" color="primary.500" mb={3}>
-          📄 Article
+          📄 Video & Story 
         </Heading>
         <Icon
           as={isOpen ? ChevronUpIcon : ChevronDownIcon}
