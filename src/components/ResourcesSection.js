@@ -26,6 +26,10 @@ function ResourcesSection() {
       name: "Antimicrobial Essential Oils and Machine Learning in Cystic Fibrosis",
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7021809/",
     },
+    {
+      name: "Proper Order of Multiple Therapies for Cystic Fibrosis",
+      url: "https://intmed.vcu.edu/media/vcusom-t4-migration/internal-medicine/about-us/institutes-and-centers/information-sheets/VCUCF_Proper-Therapy-Order.pdf",
+    },
   ];
 
   const articles = [
