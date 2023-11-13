@@ -19,12 +19,26 @@ function ResourcesSection() {
 
   const resources = [
     {
-      name: "An Introduction to Cystic Fibrosis For Patients and Their Families",
+      name: "Lung Transplantation and Cystic Fibrosis",
       url: "https://www.cysticfibrosis.ca/uploads/intro%20to%20treatment/Lung_Transplants_WEB_Compressed.pdf",
     },
     {
-      name: "Neonatal and Pediatric Respiratory Care",
+      name: "Antimicrobial Essential Oils and Machine Learning in Cystic Fibrosis",
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7021809/",
+    },
+  ];
+
+  const articles = [
+    {
+      title:
+        "An Introduction to Cystic Fibrosis For Patients and Their Families",
+      author: "Cunningham, J. C., & Taussig, L. M. (6th ed.)",
+      link: "https://www.cff.org/sites/default/files/2021-09/Intro-to-CF.pdf",
+    },
+    {
+      title: "Neonatal and Pediatric Respiratory Care (5th ed.)",
+      author: "Walsh, B. K. (2019)",
+      link: "https://www.biblio.com/book/neonatal-pediatric-respiratory-care-5ed-pb/d/1430477091",
     },
   ];
 
@@ -32,7 +46,7 @@ function ResourcesSection() {
     <Box mt={5}>
       <Flex align="center" onClick={onToggle} cursor="pointer">
         <Heading size="lg" color="primary.500" mb={3}>
-          🔗 Resources 
+          🔗 Articles & References
         </Heading>
         <Icon
           as={isOpen ? ChevronUpIcon : ChevronDownIcon}
@@ -41,6 +55,11 @@ function ResourcesSection() {
         />
       </Flex>
       <Collapse in={isOpen} animateOpacity>
+        {/* // Change this to Collapse */}
+        <Heading color="primary.500" size="md" my="7">
+          {" "}
+          📄 Articles{" "}
+        </Heading>
         {resources.map((resource, index) => (
           <MotionBox
             key={index}
@@ -63,6 +82,36 @@ function ResourcesSection() {
             >
               {resource.name}
             </Link>
+          </MotionBox>
+        ))}
+        <Heading color="primary.500" size="md" my="7">
+          {" "}
+          ✍️ References{" "}
+        </Heading>
+        {articles.map((article, index) => (
+          <MotionBox
+            key={index}
+            bg={"#fff"}
+            p={3}
+            borderRadius="md"
+            mb={3}
+            boxShadow="md"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+          >
+            <Flex align="center" mb={3}>
+              <Box>
+                <Text color="primary.600" fontWeight="bold">
+                  {article.title}
+                </Text>
+                <Text color="primary.600">{article.author}</Text>
+                <Link href={article.link} isExternal color="blue.500">
+                  Read More
+                </Link>
+              </Box>
+            </Flex>
           </MotionBox>
         ))}
       </Collapse>
