@@ -56,8 +56,9 @@ function App() {
           >
             <Icon as={FaLinkedin} mx={1} />
           </Link>
-          <Text fontSize="xs" fontFamily="arabic" style={{ direction: "rtl" }}>
-            © جميع حقوق النشر للنطاقات تحت candles.works تابعة لـ شموع البصري
+          <Text fontSize="xs">
+            © All copyright for the domains under candles.works belong to
+            Shmoa Al Basri{" "}
           </Text>
         </Flex>
       </Router>
