@@ -68,14 +68,14 @@ function InterestingFacts() {
       content: (
         <>
           <Text>
-            Cystic fibrosis (CF) manifests in various organs, but as respiratory
-            therapists our focus is on lung symptoms. These include
-            salty-tasting skin, excessive sweating, recurrent lung/sinus
-            infections, wheezing, shortness of breath at rest, coughing up blood
-            or thick mucus, and digital clubbing. To initiate further investigation,
-            prioritize patient history, considering clinical signs in one organ
-            system, the presence of a confirmed sibling with CF, or a positive
-            newborn screening result for CF.
+            Cystic fibrosis (CF) manifests in various organs, but our focus will
+            be on the unique symptoms, which include: salty-tasting skin,
+            excessive sweating, recurrent lung/sinus infections, wheezing,
+            shortness of breath at rest, coughing up blood or thick mucus, and
+            digital clubbing. To initiate further investigation, prioritize
+            patient history, considering clinical signs in one organ system, a
+            confirmed sibling with CF, or a positive newborn screening result
+            for CF.
           </Text>
         </>
       ),
