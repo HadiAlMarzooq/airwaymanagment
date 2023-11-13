@@ -19,7 +19,7 @@ function Team() {
             name: 'Shmoa Al Basri',
         },
         {
-            name: 'Fatima Ameen',
+            name: 'Fatima Alkuaibi',
         },
         {
             name: 'Saja Hassan',
