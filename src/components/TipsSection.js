@@ -58,7 +58,7 @@ function TipsSection() {
             boxShadow="lg"
             bg="gray.100"
           >
-            <video autoPlay controls style={{ maxWidth: "100%", height: "auto" }}>
+            <video controls style={{ maxWidth: "100%", height: "auto" }}>
               <source src={myVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
