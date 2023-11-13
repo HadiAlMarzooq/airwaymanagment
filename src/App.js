@@ -46,11 +46,10 @@ function App() {
         </Container>
         <Flex
           textAlign="center"
-          paddingTop="0.5rem"
           alignItems="center"
           justifyContent="center"
         >
-          <Text fontSize="xs">
+          <Text fontSize="0.6em">
             © All copyright for the domains under candles.works belong to Shmoa
             Al Basri{" "}
           </Text>
@@ -58,7 +57,7 @@ function App() {
             href="https://www.linkedin.com/in/shmoa-albasri-970261244/"
             isExternal
           >
-            <Icon as={FaLinkedin} mx={1} />
+            <Icon as={FaLinkedin} mx={1}/>
           </Link>
         </Flex>
       </Router>
