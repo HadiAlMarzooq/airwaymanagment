@@ -28,7 +28,7 @@ function Team() {
             name: 'Noor Jawad',
         },
         {
-            name: 'Makarem Alkalaf',
+            name: 'Makarem Alkhalaf',
         },
         {
             name: 'Najla Omar',
