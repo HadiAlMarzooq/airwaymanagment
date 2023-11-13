@@ -22,7 +22,7 @@ function Team() {
             name: 'Fatima Alkuaibi',
         },
         {
-            name: 'Saja Hassan',
+            name: 'Saja Abuzaid',
         },
         {
             name: 'Noor Jawad',
