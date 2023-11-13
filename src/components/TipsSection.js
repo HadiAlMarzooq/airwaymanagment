@@ -2,24 +2,17 @@
 import {
   Box,
   Heading,
-  Text,
   useDisclosure,
   Collapse,
   Flex,
   Icon,
-  Link,
-  useTheme,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-import { motion } from "framer-motion";
 import myVideo from "../assets/videos/story.mp4";
 
-const MotionBox = motion(Box);
 
 function TipsSection() {
   const { isOpen, onToggle } = useDisclosure();
-  const theme = useTheme();
 
   return (
     <Box mt={5}>
