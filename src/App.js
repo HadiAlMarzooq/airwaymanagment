@@ -1,4 +1,3 @@
-// Import necessary libraries
 import {
   ChakraProvider,
   Box,
@@ -8,6 +7,7 @@ import {
   extendTheme,
   Badge,
   Flex,
+  Link,
 } from "@chakra-ui/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import TipsSection from "./components/TipsSection";
@@ -122,11 +122,7 @@ function App() {
             Embark on an exhilarating journey as we explore the realms of Cystic
             Fibrosis together. Ready to dive in?
           </MotionText>
-
-          <Heading mb={5} color="primary.600" textAlign="center">
-            🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁 🫁
-          </Heading>
-            <InterestingFacts />
+          <InterestingFacts />
 
           <Box my={5}>
             <TipsSection />
@@ -140,6 +136,19 @@ function App() {
           </Box>
         </MotionBox>
       </Container>
+      <Flex
+        textAlign="center"
+        paddingTop="0.5rem"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Text fontSize="xs" fontFamily="arabic" style={{ direction: "rtl" }}>
+          © جميع حقوق النشر للنطاقات تحت candles.works تابعة لـ شموع البصري
+        </Text>
+        <Link href="https://github.com/HadiAlmarzooq" isExternal>
+          {/* <Icon as={FaGithub} mx={1} /> */}
+        </Link>
+      </Flex>
     </ChakraProvider>
   );
 }
