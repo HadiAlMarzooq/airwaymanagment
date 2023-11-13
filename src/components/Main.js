@@ -137,7 +137,7 @@ export function Main() {
       </Box>
       <Box my={5} textAlign="center">
         <Button as={RouterLink} to="/team" leftIcon={<Icon as={FaUsers} />}>
-          Discover the Team Members
+          Discover Team Members
         </Button>
       </Box>
     </MotionBox>
