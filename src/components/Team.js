@@ -36,7 +36,6 @@ function Team() {
         {
             name: 'Frsan Al Sulwli',
         },
-        // Add more team members as needed
     ];
     
 
