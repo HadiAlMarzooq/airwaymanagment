@@ -13,7 +13,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Team from "./components/Team";
 // Define your theme
 const theme = extendTheme({
-  fonts: { 
+  fonts: {
     heading: "Poppins, sans-serif",
     body: "Poppins, sans-serif",
     arabic: "Tajawal, sans-serif",
@@ -50,7 +50,10 @@ function App() {
           alignItems="center"
           justifyContent="center"
         >
-          <Link href="https://github.com/HadiAlmarzooq" isExternal>
+          <Link
+            href="https://www.linkedin.com/in/shmoa-albasri-970261244/"
+            isExternal
+          >
             <Icon as={FaLinkedin} mx={1} />
           </Link>
           <Text fontSize="xs" fontFamily="arabic" style={{ direction: "rtl" }}>
