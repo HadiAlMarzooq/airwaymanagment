@@ -48,18 +48,28 @@ function ResourcesSection() {
 
   return (
     <Box mt={5}>
-      <Flex align="center" onClick={onToggle} cursor="pointer">
-        <Heading size="lg" color="primary.500" mb={3}>
-          🔗 Articles & References
+      <Flex
+        align="center"
+        justify="space-between"
+        onClick={onToggle}
+        cursor="pointer"
+        bg="primary.100"
+        p={4}
+        borderRadius="md"
+        boxShadow="md"
+        _hover={{
+          bg: "primary.200",
+        }}
+      >
+        <Heading size="lg" color="primary.500">
+          🔗 References
         </Heading>
         <Icon
           as={isOpen ? ChevronUpIcon : ChevronDownIcon}
-          color="primary.500"
           boxSize={8}
         />
       </Flex>
       <Collapse in={isOpen} animateOpacity>
-        {/* // Change this to Collapse */}
         <Heading color="primary.500" size="md" my="7">
           {" "}
           📄 Articles{" "}
@@ -90,7 +100,7 @@ function ResourcesSection() {
         ))}
         <Heading color="primary.500" size="md" my="7">
           {" "}
-          ✍️ References{" "}
+          📚 Books{" "}
         </Heading>
         {articles.map((article, index) => (
           <MotionBox
