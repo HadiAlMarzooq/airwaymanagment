@@ -5,14 +5,6 @@ import { Link as RouterLink } from 'react-router-dom';
 const MotionBox = motion(Box);
 const MotionButton = motion(Button);
 
-// 1- Shomoa Albasri 
-// 2- Fatima Ameen 
-// 3- Saja Hassan 
-// 4- Noor Jawad 
-// 5- Makarem Alkalaf 
-// 6- Najla Omar 
-// 7- Fursan
-
 function Team() {
     const teamMembers = [
         {
